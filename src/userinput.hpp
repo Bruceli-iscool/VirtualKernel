@@ -1,5 +1,6 @@
 #define USERINPUT_HPP
 #include "mv.hpp"
+#include "cd.hpp"
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -13,7 +14,7 @@ void resetArray() {
     }
 }
 
-int getinput(const std::string& input) {
+void getinput(const std::string& input) {
     // split input into several parts then detect
     std::istringstream iss(input);
     int i = 0;
@@ -25,6 +26,9 @@ int getinput(const std::string& input) {
     }
     if (splitStringParts[0] == "exit()") {
         exit(0);
+    }
+    if (splitStringParts[0] == "cd") {
+        cd(splitStringParts[1]);
     }
     else {
         std::cout << "VirtualKernel: Command not found: " << input << std::endl;
