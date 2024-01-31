@@ -1,4 +1,6 @@
-#include "vk.h"
+#ifndef VK_H
+#define VK_H
+#include <string>
 #include <iostream>
 #include <cstdio> // remove function
 #include <sys/stat.h>
@@ -18,3 +20,4 @@ bool mv(const std::string& sourcePath, const std::string& destinationPath) {
     // if successful
     return true;
 }
+#endif
