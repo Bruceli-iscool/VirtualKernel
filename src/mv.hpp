@@ -1,5 +1,5 @@
 #ifndef VK_H
-#define VK_H
+#define VK_HPP
 #include <string>
 #include <iostream>
 #include <cstdio> // remove function
