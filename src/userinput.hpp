@@ -1,6 +1,7 @@
 #define USERINPUT_HPP
 #include "mv.hpp"
 #include "cd.hpp"
+#include "ls.hpp"
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -21,17 +22,26 @@ void getinput(const std::string& input) {
     while (std::getline(iss, splitStringParts[i], ' ') && i < maxTon) {
         i++;
     }
+    if (input != " ") {
+
+    
     if (splitStringParts[0] == "mv") {
         mv(splitStringParts[1], splitStringParts[2]);
     }
-    if (splitStringParts[0] == "exit()") {
+    if (splitStringParts[0] == "exit") {
         exit(0);
     }
     if (splitStringParts[0] == "cd") {
         cd(splitStringParts[1]);
     }
-    else {
+    if (splitStringParts[0] == "ls") {
+        ls(splitStringParts[1]);
+    }}
+    else if (input != " " ) {
         std::cout << "VirtualKernel: Command not found: " << input << std::endl;
+        resetArray();
+    }
+    else {
         resetArray();
     }
     resetArray();
