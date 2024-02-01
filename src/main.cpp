@@ -2,7 +2,8 @@
 #include "userinput.hpp"
 
 int main() {
-    std::cout << "VirtualKernel v0.0\n exit to exit" << std::endl;
+    // main ui
+    std::cout << "VirtualKernel v0.0\nexit to exit" << std::endl;
     while (true) {
        std::string userInput;
        std::cout << "VirtualKernel@user>>> ";

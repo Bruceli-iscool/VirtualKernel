@@ -2,6 +2,7 @@
 #include "mv.hpp"
 #include "cd.hpp"
 #include "ls.hpp"
+#include "pwd.hpp"
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -36,6 +37,9 @@ void getinput(const std::string& input) {
     }
     if (splitStringParts[0] == "ls") {
         ls(splitStringParts[1]);
+    }
+    if (splitStringParts[0] == "pwd") {
+        pwd();
     }}
     else if (input != " " ) {
         std::cout << "VirtualKernel: Command not found: " << input << std::endl;
