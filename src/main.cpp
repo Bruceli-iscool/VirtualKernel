@@ -7,8 +7,12 @@ int main() {
        std::string userInput;
        std::cout << "VirtualKernel@user>>> ";
        std::getline(std::cin, userInput);
-       getinput(userInput);
-       
+       if (userInput == ""){
+        
+       }
+       else {
+        getinput(userInput);
+       }
 
     }
 }
