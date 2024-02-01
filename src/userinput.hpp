@@ -3,6 +3,7 @@
 #include "cd.hpp"
 #include "ls.hpp"
 #include "pwd.hpp"
+#include "mkdir.hpp"
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -23,7 +24,7 @@ void getinput(const std::string& input) {
     while (std::getline(iss, splitStringParts[i], ' ') && i < maxTon) {
         i++;
     }
-    if (input != " ") {
+    if (input.length() == 0) {
 
     
     if (splitStringParts[0] == "mv") {
@@ -40,12 +41,12 @@ void getinput(const std::string& input) {
     }
     if (splitStringParts[0] == "pwd") {
         pwd();
-    }}
-    else if (input != " " ) {
-        std::cout << "VirtualKernel: Command not found: " << input << std::endl;
-        resetArray();
     }
+    if (splitStringParts[0] == "mkdir") {
+        mkdir(splitStringParts[1]);
+    }}
     else {
+        std::cout << "VirtualKernel: Command not found: " << input << std::endl;
         resetArray();
     }
     resetArray();
