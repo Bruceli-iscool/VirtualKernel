@@ -1,4 +1,7 @@
 #define USERINPUT_HPP
+#include "cat.hpp"
+#include "touch.hpp"
+#include "cp.hpp"
 #include "mv.hpp"
 #include "cd.hpp"
 #include "ls.hpp"
@@ -48,6 +51,15 @@ void getinput(const std::string& input) {
         mkdir(splitStringParts[1]);}
     else if (splitStringParts[0] == "rm") {
         rm(splitStringParts[1]);
+    }
+    else if (splitStringParts[0] == "cp") {
+        cp(splitStringParts[1], splitStringParts[2]);
+    }
+    else if (splitStringParts[0] == "touch") {
+        touch(splitStringParts[1]);
+    }
+    else if (splitStringParts[0] == "cat") {
+        cat(splitStringParts[1]);
     }
     
     else {
