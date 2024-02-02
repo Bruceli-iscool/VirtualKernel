@@ -4,6 +4,7 @@
 #include "ls.hpp"
 #include "pwd.hpp"
 #include "mkdir.hpp"
+#include "rm.hpp"
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -44,6 +45,9 @@ void getinput(const std::string& input) {
     }
     if (splitStringParts[0] == "mkdir") {
         mkdir(splitStringParts[1]);
+    if (splitStringParts[0] == "rm") {
+        rm(splitStringParts[1]);
+    }
     }}
     else {
         std::cout << "VirtualKernel: Command not found: " << input << std::endl;
