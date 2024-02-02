@@ -1,5 +1,6 @@
 #ifndef VK_H
 #define VK_H
+#include "security.hpp"
 #include <string>
 #include <iostream>
 #include <cstdio> // remove function
@@ -20,4 +21,6 @@ bool mv(const std::string& sourcePath, const std::string& destinationPath) {
     // if successful
     return true;
 }
+
+
 #endif

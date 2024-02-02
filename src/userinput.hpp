@@ -27,28 +27,29 @@ void getinput(const std::string& input) {
     }
     if (input.length() == 0) {
 
-    
+    }
+
     if (splitStringParts[0] == "mv") {
         mv(splitStringParts[1], splitStringParts[2]);
     }
-    if (splitStringParts[0] == "exit") {
+    else if (splitStringParts[0] == "exit") {
         exit(0);
     }
-    if (splitStringParts[0] == "cd") {
+    else if (splitStringParts[0] == "cd") {
         cd(splitStringParts[1]);
     }
-    if (splitStringParts[0] == "ls") {
+    else if (splitStringParts[0] == "ls") {
         ls(splitStringParts[1]);
     }
-    if (splitStringParts[0] == "pwd") {
+    else if (splitStringParts[0] == "pwd") {
         pwd();
     }
-    if (splitStringParts[0] == "mkdir") {
-        mkdir(splitStringParts[1]);
-    if (splitStringParts[0] == "rm") {
+    else if (splitStringParts[0] == "mkdir") {
+        mkdir(splitStringParts[1]);}
+    else if (splitStringParts[0] == "rm") {
         rm(splitStringParts[1]);
     }
-    }}
+    
     else {
         std::cout << "VirtualKernel: Command not found: " << input << std::endl;
         resetArray();

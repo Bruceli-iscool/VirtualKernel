@@ -1,2 +1,2 @@
 clang++ -std=c++17 C:\Users\isano\OneDrive\Documents\GitHub\VirtualKernel\src\main.cpp -o VirtualKernel.exe
-to ru
+to run
