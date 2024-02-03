@@ -1,4 +1,6 @@
 #define USERINPUT_HPP
+#include "zip.hpp"
+#include "tar.hpp"
 #include "find.hpp"
 #include "head.hpp"
 #include "cat.hpp"
@@ -69,8 +71,12 @@ void getinput(const std::string& input) {
     else if (splitStringParts[0] == "find") {
         find(splitStringParts[1], splitStringParts[2]);
     }
-
-    
+    else if (splitStringParts[0] == "tar") {
+        tar(splitStringParts[1], splitStringParts[2]);
+    }
+    else if (splitStringParts[0] == "zip") {
+        zip(splitStringParts[1], splitStringParts[2]);
+    }
     else {
         std::cout << "VirtualKernel: Command not found: " << input << std::endl;
         resetArray();
