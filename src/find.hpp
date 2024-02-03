@@ -3,7 +3,7 @@
 #include <filesystem>
 
 // search for file
-namespace fis = std::filesystem
+namespace fis = std::filesystem;
 
 void find(const std::string&CBpath, const std::string&search) {
     for (const auto&entry : fis::directory_iterator(CBpath)) {
