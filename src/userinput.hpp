@@ -1,4 +1,6 @@
 #define USERINPUT_HPP
+#include "find.hpp"
+#include "head.hpp"
 #include "cat.hpp"
 #include "touch.hpp"
 #include "cp.hpp"
@@ -61,6 +63,13 @@ void getinput(const std::string& input) {
     else if (splitStringParts[0] == "cat") {
         cat(splitStringParts[1]);
     }
+    else if (splitStringParts[0] == "head") {
+        head(splitStringParts[1]);
+    }
+    else if (splitStringParts[0] == "find") {
+        find(splitStringParts[1], splitStringParts[2]);
+    }
+
     
     else {
         std::cout << "VirtualKernel: Command not found: " << input << std::endl;
